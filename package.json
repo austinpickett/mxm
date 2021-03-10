@@ -1,0 +1,28 @@
+{
+  "name": "mxm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinpickett/mxm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austinpickett/mxm/issues"
+  },
+  "homepage": "https://github.com/austinpickett/mxm#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^4.2.0"
+  }
+}
