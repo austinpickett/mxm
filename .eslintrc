@@ -1,0 +1,49 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json",
+    "tsconfigRootDir": "./"
+  },
+  "extends": [
+    "airbnb-typescript-prettier",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "sort-keys-fix",
+    "eslint-plugin-typescript-sort-keys",
+    "better-styled-components"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": [
+      1,
+      {
+        "fixToUnknown": false,
+        "ignoreRestArgs": true
+      }
+    ],
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-param-reassign": 0,
+    "no-plusplus": 0,
+    "no-return-assign": 0,
+    "no-sparse-arrays": 0,
+    "no-underscore-dangle": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-sort-props": 2,
+    "react/no-array-index-key": 0,
+    "no-shadow": 1,
+    "react/no-danger": 0,
+    "sort-keys-fix/sort-keys-fix": 2,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1,
+    "import/no-cycle": 0,
+    "prettier/prettier": [
+      1,
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
