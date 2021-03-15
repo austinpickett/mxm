@@ -20,6 +20,7 @@
   "homepage": "https://github.com/austinpickett/mxm#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^8.0.0",
     "html-webpack-plugin": "^5.3.1",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
@@ -28,6 +29,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@babylonjs/core": "^4.2.0"
+    "@babylonjs/core": "^4.2.0",
+    "@babylonjs/loaders": "^4.2.0"
   }
 }

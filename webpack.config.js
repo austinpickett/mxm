@@ -2,6 +2,8 @@ const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+
 const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
@@ -13,7 +15,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
-    host: "0.0.0.0",
+    host: "localhost",
     port: 8080, //port that we're using for local host (localhost:8080)
     disableHostCheck: true,
     contentBase: path.resolve(appDirectory, "public"), //tells webpack to serve from the public folder
@@ -33,6 +35,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(appDirectory, "public/index.html"),
+    }),
+    new CopyPlugin({
+      patterns: ['public/ExtrudeMXMthin.glb', 'public/css/']
     }),
     new CleanWebpackPlugin(),
   ],
