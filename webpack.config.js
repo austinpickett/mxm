@@ -37,7 +37,9 @@ module.exports = {
       template: path.resolve(appDirectory, "public/index.html"),
     }),
     new CopyPlugin({
-      patterns: ['public/ExtrudeMXMthin.glb', 'public/css/']
+      patterns: ['public/ExtrudeMXMthin.glb', {
+        from: 'public/css/index.css', to: 'css/index.css'
+      }]
     }),
     new CleanWebpackPlugin(),
   ],
