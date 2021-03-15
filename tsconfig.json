@@ -1,0 +1,81 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es2019"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es6",
+    "typeRoots": [
+      "src/types"
+    ],
+    "declarationDir": "dist/types",
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": [
+          "createGlobalStyle",
+          "css",
+          "media.max.desktop",
+          "media.max.laptop",
+          "media.max.phone",
+          "media.max.tablet",
+          "media.min.desktop",
+          "media.min.laptop",
+          "media.min.phone",
+          "media.min.tablet",
+          "styled",
+          "keyframes"
+        ]
+      }
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".out",
+    "**/*/stories.tsx",
+    "src/storybook",
+    "**/*/*.gql",
+    "src/areas/pages/Preview"
+  ],
+  "typedocOptions": {
+    "name": "DW Design System",
+    "exclude": [
+      "**/*/stories.tsx",
+      "**/*/style.tsx",
+      "src/assets",
+      "src/components/ErrorBoundary",
+      "src/storybook",
+      "src/sys"
+    ],
+    "out": "docs",
+    "mode": "file",
+    "ignoreCompilerErrors": true,
+    "excludeExternals": true
+  }
+}
