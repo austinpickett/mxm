@@ -22,7 +22,7 @@ const createScene = () => {
   camera.attachControl(canvas, true);
 
   const light: HemisphericLight = new HemisphericLight("light1", new Vector3(1, 1, 0), scene);
-  light.diffuse = new Color3(1, 0, 0);
+  light.diffuse = new Color3(0, 0, 1);
 	light.specular = new Color3(0, 0, 0);
   const logo: Nullable<ISceneLoaderPlugin | ISceneLoaderPluginAsync> = SceneLoader.Append("../../", "ExtrudeMXMthin.glb", scene, (newMeshes) => {})
 
