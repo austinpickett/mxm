@@ -37,7 +37,7 @@ module.exports = {
       template: path.resolve(appDirectory, "public/index.html"),
     }),
     new CopyPlugin({
-      patterns: ['public/ExtrudeMXMthin.glb', {
+      patterns: ['public/skull/skull.babylon', {
         from: 'public/css/index.css', to: 'css/index.css'
       }]
     }),

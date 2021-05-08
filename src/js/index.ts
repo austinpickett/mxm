@@ -19,7 +19,7 @@ const createScene = () => {
   const camera: ArcRotateCamera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, Vector3.Zero(), scene);
   camera.attachControl(canvas, true);
 
-  const skull: Nullable<ISceneLoaderPlugin | ISceneLoaderPluginAsync> = SceneLoader.ImportMesh("", "./skull/", "skull.babylon", scene, (newMeshes) => {
+  const skull: Nullable<ISceneLoaderPlugin | ISceneLoaderPluginAsync> = SceneLoader.ImportMesh("", "./", "skull.babylon", scene, (newMeshes) => {
     scene.createDefaultCameraOrLight(true, true, true);
   })
 
