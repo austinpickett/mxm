@@ -7,18 +7,18 @@ const CopyPlugin = require('copy-webpack-plugin');
 const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
-  entry: path.resolve(appDirectory, "src/js/index.ts"), //path to the main .ts file
+  entry: path.resolve(appDirectory, "src/js/index.ts"),
   output: {
-    filename: "js/main.js", //name for the js file that is created/compiled in memory
+    filename: "js/main.js",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
     host: "localhost",
-    port: 8080, //port that we're using for local host (localhost:8080)
+    port: 8080,
     disableHostCheck: true,
-    contentBase: path.resolve(appDirectory, "public"), //tells webpack to serve from the public folder
+    contentBase: path.resolve(appDirectory, "public"),
     publicPath: "/",
     hot: true,
   },
