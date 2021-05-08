@@ -19,7 +19,7 @@ const createScene = () => {
   const camera: ArcRotateCamera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, Vector3.Zero(), scene);
   camera.attachControl(canvas, true);
 
-  const skull: Nullable<ISceneLoaderPlugin | ISceneLoaderPluginAsync> = SceneLoader.ImportMesh("", "../../skull/", "skull.babylon", scene, (newMeshes) => {
+  const skull: Nullable<ISceneLoaderPlugin | ISceneLoaderPluginAsync> = SceneLoader.ImportMesh("", "./skull/", "skull.babylon", scene, (newMeshes) => {
     scene.createDefaultCameraOrLight(true, true, true);
   })
 
@@ -32,9 +32,9 @@ engine.runRenderLoop(() => {
   scene.render();
 });
 
-let cursor = document.querySelector("#cursor")
+const cursor = (document.querySelector("#cursor") as HTMLElement)
 
 window.addEventListener("mousemove", (e) => {
-  (cursor as any).style.top = `${e.pageY}px`;
-  (cursor as any).style.left = `${e.pageX}px`;
+  cursor.style.top = `${e.pageY}px`;
+  cursor.style.left = `${e.pageX}px`;
 });
