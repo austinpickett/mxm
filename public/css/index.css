@@ -1,10 +1,23 @@
 body {
   background: #000;
   overflow: hidden;
+  cursor: none;
 }
 
 canvas {
   height: 100%;
   width: 100%;
   outline: 0;
+  position: fixed;
+}
+
+#cursor {
+  height: 100px;
+  width: 100px;
+  mix-blend-mode: exclusion;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 5000;
+  background-color: #FFF;
+  pointer-events: none;
 }

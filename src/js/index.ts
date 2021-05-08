@@ -31,3 +31,10 @@ const scene: Scene = createScene();
 engine.runRenderLoop(() => {
   scene.render();
 });
+
+let cursor = document.querySelector("#cursor")
+
+window.addEventListener("mousemove", (e) => {
+  (cursor as any).style.top = `${e.pageY}px`;
+  (cursor as any).style.left = `${e.pageX}px`;
+});
